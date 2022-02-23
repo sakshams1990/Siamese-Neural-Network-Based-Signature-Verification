@@ -40,7 +40,7 @@ def app():
 
     if image1 is not None and image2 is not None:
         threshold = st.sidebar.number_input('threshold', value=70)
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
         col1.image(image1, use_column_width=True, caption="Benchmarked")
         col2.image(image2, use_column_width=True, caption="New Signature")
         model_option = st.sidebar.selectbox('Select the algorithm to be used for feature extraction',
